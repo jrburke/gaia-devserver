@@ -42,7 +42,7 @@ developed. Life on the edge can be difficult, but you get access to the latest
 developments. An analogy from the iOS world: think of of it as getting access
 to iOS a year before Apple shipped it in the first iPhone.
 
-## Prerequisites
+## Prerequisites <a name="prerequisites"></a>
 
 * Node
 * You have some developer tools installed, like make and git.
@@ -56,7 +56,7 @@ Firefox Nightly will receive the latest updates that allow the B2G APIs to work.
 On the flip side, it can update every day, and very occasionally the nightly
 build can have problems that make it hard to use.
 
-## Setup
+## Setup <a name="setup"></a>
 
 These instructions assume you start the work in your home directory. Adjust
 the paths accordingly if you do the installation somewhere else. These
@@ -92,15 +92,15 @@ special API access.
 
 Once Firefox Nightly starts up, then do the following:
 
-    * Open a new tab and go to `about:config`.
-    * Search for `browser.offline-apps.notify` and set it to **false**. This
-      avoids the prompts that Nightly would show for each app that uses appcache.
-    * Create a **new** config value:
-        * Right-click and select the `New, Boolean` option
-        * For the name, use `dom.w3c_touch_events.enabled`
-        * For the value set to `true`
+* Open a new tab and go to `about:config`.
+* Search for `browser.offline-apps.notify` and set it to **false**. This
+  avoids the prompts that Nightly would show for each app that uses appcache.
+* Create a **new** config value:
+    * Right-click and select the `New, Boolean` option
+    * For the name, use `dom.w3c_touch_events.enabled`
+    * For the value set to `true`
 
-## Staying up-to-date
+## Staying up-to-date <a name="updating"></a>
 
 The code changes frequently. Before filing issues, be sure to have the latest
 code:
@@ -121,9 +121,9 @@ Close down Firefox Nightly first, then from inside the gaia directory:
 Reopen Firefox Nightly. You may also then want to clear the browser caches used
 in Nightly. Go to the `Tools, Clear Recent History` menu item, then:
 
-    * Select "Everything" for the "Time range to clear"
-    * In the Details section, check all the checkboxes
-    * Click "Clear Now".
+* Select "Everything" for the "Time range to clear"
+* In the Details section, check all the checkboxes
+* Click "Clear Now".
 
 If you delete the `gaia/profile` dir, then see the <a href="#setup">Setup</a>
 section above to redo the preference changes in Nightly.
