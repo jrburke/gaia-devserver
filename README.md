@@ -132,3 +132,29 @@ section above to redo the preference changes in Nightly.
 
     cd gaia-devserver
     git pull origin master
+
+## Uninstalling apps <a name="uninstalling"></a>
+
+If you are installing your own web apps into Gaia and want to remove them at
+some point to test installation flows, you can do that by:
+
+* Go to https://myapps.mozillalabs.com/
+* Find the app
+* Click the mouse and hold down the button. An X will appear. Release the
+mouse button to uninstall it.
+
+**However**, for that to work, you need to give myapps.mozillalabs.com access
+to uninstall apps:
+
+1) Close Firefox Nightly
+
+2) edit gaia/profile/user.js
+
+3) Add https://myapps.mozillalabs.com to the 'dom.mozApps.whitelist:
+
+user_pref("dom.mozApps.whitelist","http://dialer.gaiamobile.org:8424,http://homescreen.gaiamobile.org:8424,https://myapps.mozillalabs.com");
+
+4) Launch Firefox Nightly.
+
+Now you should be able to uninstall your app when going to https://myapps.mozillalabs.com/ 
+
